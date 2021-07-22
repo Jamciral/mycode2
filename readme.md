@@ -76,7 +76,7 @@ import random
 
 ## 用法
 
-将[data](https://github.com/Jamciral/mycode2/tree/master/data)文件夹下的相关文件放置于源代码相同文件夹内，点击main.py即可运行。
+点击main.py即可运行并生成制定文件。
 
 ## 结果
 
