@@ -76,7 +76,7 @@
 
 ## 用法
 
-点击 python3 src/main.py 即可运行并生成指定文件。
+输入指令 python3 src/main.py 即可运行并生成指定文件。
 
 ## 结果
 
