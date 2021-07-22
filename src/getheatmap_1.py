@@ -73,7 +73,7 @@ def getfreq():
     #只保留字母
     str = str.replace('-', ' ')
     #将拼音转换结果写入txt
-    txt = open("1_共产党宣言_拼音.txt", "w").write(str)
+    txt = open("../output\\1_共产党宣言_拼音.txt", "w").write(str)
     #转换为列表
     list = str.split(" ")
     #转换为字典，以统计频率
@@ -100,7 +100,7 @@ def apply_heatmap(image,data):
     image3 = cv2.addWeighted(hit_img, alpha, image2, 1-alpha, 0) # 将热度图覆盖到原图
     #cv2.imshow('ru',image3)
     #保存图片
-    cv2.imwrite('1_heatmap.jpg',image3)
+    cv2.imwrite('../output\\1_heatmap.jpg',image3)
     cv2.waitKey(0)
     return image3
 
@@ -155,7 +155,7 @@ def pltbarchart():
     zimu = list(items.keys())
     shuzi = list(items.values())
     letterfreq = dict(zip(zimu,shuzi))
-    txt = open("1_字母按键频率.txt", "w").write(str(letterfreq))
+    txt = open("../output\\1_字母按键频率.txt", "w").write(str(letterfreq))
     #绘制柱状图
     plt.figure(figsize=(14, 7)) 
     plt.bar(zimu,shuzi)
@@ -166,7 +166,7 @@ def pltbarchart():
     plt.xlabel('letter')
     plt.ylabel('freqency(times)')
     #保存柱状图
-    plt.savefig('1_letter_freq_bar.jpg')
+    plt.savefig('../output\\1_letter_freq_bar.jpg')
     #plt.show()
     zongshu = sum(shuzi)
 
@@ -175,11 +175,11 @@ def _main():
     dicty = getletterfreq()
     addedlist = {a:[b[0],b[1],dicty[a]] for a, b in key_weights.items()}
     liste = addedlist.values()
-    apply_heatmap('keyboard.jpg',(list(liste)))
+    apply_heatmap('../data\\keyboard.jpg',(list(liste)))
     pltbarchart()
  
 if __name__ == '__main__':
-    filename = '共产党宣言.pdf'
+    filename = '../data\\共产党宣言.pdf'
     #键盘上各字母按键坐标
     key_weights = {
         'z':[250,380],'x':[340,380],'c':[430,380],'v':[520,380],'b':[610,380],'n':[700,380],'m':[790,380] ,
