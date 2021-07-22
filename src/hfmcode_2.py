@@ -240,11 +240,11 @@ if __name__ == '__main__':
     #哈夫曼树元数(26个字母对应26元)
     num1=26
     num2=num1-1
-    filename = '1_字母按键频率.txt'
+    filename = '../output\\1_字母按键频率.txt'
 
     #中文拼音(全拼)出现的频率(次数)
     p_dict={}#这个字典用来存信源字母及其频率
-    with open('1_共产党宣言_拼音.txt', encoding='utf8') as f:
+    with open('../output\\1_共产党宣言_拼音.txt', encoding='utf8') as f:
         wordlist = f.read().split(' ')     # .read()获得所有内容； .split(' ')按' '分割成列表
         string = ''.join(wordlist)
     worddict = {}
@@ -331,7 +331,7 @@ if __name__ == '__main__':
     str_jhx +='根据均衡性的定义，我们可以知道：总均衡指数越接近于1，均衡性约好，越接近于0，均衡性越差。\n'
     str_jhx +='使用全拼编码方案时的总均衡指数为: %s' %qp_jhx
     
-    txt = open("2_输入效率与均衡性.txt", "w").write(str_xl+str_jhx)
+    txt = open("../output\\2_输入效率与均衡性.txt", "w").write(str_xl+str_jhx)
 
     str_hfmcode = '采用哈夫曼树进行编码，得到的新编码方式在附录1中（格式为 \'全拼编码\':[出现次数,\'哈夫曼编码\']）\n'
     str_hfmcode += '新的编码方式总字符长度为 %s,对应最高效率1.\n' %hfmlen
@@ -341,7 +341,7 @@ if __name__ == '__main__':
     str_appendix2 = '附件2: 编码结果\n' +a
     str_appendix3 = '附件3: 解码结果\n' +aa
 
-    txt = open("3_新的编码方式.txt", "w").write(str_hfmcode)
-    txt = open("附件1_哈夫曼编码表.txt", "w").write(str_appendix1)
-    txt = open("附件2_编码结果.txt", "w").write(str_appendix2)
-    txt = open("附件3_解码结果.txt", "w").write(str_appendix3)
+    txt = open("../output\\3_新的编码方式.txt", "w").write(str_hfmcode)
+    txt = open("../output\\附件1_哈夫曼编码表.txt", "w").write(str_appendix1)
+    txt = open("../output\\附件2_编码结果.txt", "w").write(str_appendix2)
+    txt = open("../output\\附件3_解码结果.txt", "w").write(str_appendix3)
