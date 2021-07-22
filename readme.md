@@ -56,22 +56,22 @@
 ## 必要条件
 
 本项目需要用到python(2.7及以上版本)，需要运行以下库：
-> from zhon.hanzi import punctuation
-from xpinyin import Pinyin
-from io import StringIO
-from io import open
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from pdfminer.pdfinterp import PDFResourceManager, process_pdf
-import pandas as pd
-import cv2
-import numpy as np
-from PIL import Image
-from pyheatmap.heatmap import HeatMap
-import matplotlib.pyplot as plt
-import math 
-import xlwt
-import random
+    from zhon.hanzi import punctuation
+    from xpinyin import Pinyin
+    from io import StringIO
+    from io import open
+    from pdfminer.converter import TextConverter
+    from pdfminer.layout import LAParams
+    from pdfminer.pdfinterp import PDFResourceManager, process_pdf
+    import pandas as pd
+    import cv2
+    import numpy as np
+    from PIL import Image
+    from pyheatmap.heatmap import HeatMap
+    import matplotlib.pyplot as plt
+    import math 
+    import xlwt
+    import random
 
 
 ## 用法
